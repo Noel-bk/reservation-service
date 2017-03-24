@@ -57,7 +57,7 @@ class SampleDataCLR implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Stream.of("Penny", "Bernadette", "Amy", "Emily")
-                .forEach(name -> reservationRepository.save(new Reservation(name)));
+            .forEach(name -> reservationRepository.save(new Reservation(name)));
         reservationRepository.findAll().forEach(System.out::println);
     }
 }
@@ -95,8 +95,8 @@ class Reservation {
     @Override
     public String toString() {
         return "Reservation{" +
-                "id=" + id +
-                ", reservationName='" + reservationName + '\'' +
-                '}';
+            "id=" + id +
+            ", reservationName='" + reservationName + '\'' +
+            '}';
     }
 }
